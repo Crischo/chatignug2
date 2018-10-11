@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  <a id="sala" class="navbar-brand" href="#">Bienvenido</a>
+
+  <img src='../../assets/img.png' class='imgRedonda' />
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <div class="btn-group">
+        <button type="button" class="sera btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Carreras
+        </button>
+        <div class="dropdown-menu">
+          <button class="dropdown-item" (click)="filtrar(post.id)" type="button" *ngFor ="let post of posts"><span class="span">{{post.nombre}}</span></button>
+          
+        </div>
+      </div>
+
+    </div>
+
+</nav>
+
+<app-cuerpo  [mensajes]="mensajes"   [salaid]="salaid"></app-cuerpo>

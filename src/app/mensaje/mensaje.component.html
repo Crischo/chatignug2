@@ -1,0 +1,14 @@
+<div class="messageContainer" *ngFor="let mensaje of mensajes">
+    <div class="messageData">
+        <span class="sender">
+            {{mensaje.nombre}} 
+        </span>
+        <span class="timestamp" 
+            >
+            {{ timeStamp | date:'medium' }}
+        </span>
+    </div>
+    <div class="messageContent">
+       {{mensaje.mensaje}}
+    </div>
+</div>
