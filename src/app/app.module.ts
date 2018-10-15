@@ -6,6 +6,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
+
 //Componentes
 import { AppComponent } from './app.component';
 import { CabezaComponent } from './cabeza/cabeza.component';
@@ -28,6 +29,7 @@ import {FormsModule} from '@angular/forms';
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule, // for database
+ 
     FormsModule
   ],
   //en providers van los servicios
