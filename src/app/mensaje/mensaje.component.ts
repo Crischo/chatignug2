@@ -11,6 +11,7 @@ import { Mensaje } from '../clases/mensaje';
 })
 export class MensajeComponent implements OnInit {
 @Input() mensajes: Mensaje[];
+@Input() idPersona: string;
 nombreValue = '';
 mensajeValue = '';
 timeStamp: Date = new Date();
@@ -21,6 +22,8 @@ timeStamp: Date = new Date();
    }
 
   ngOnInit() {
+   // this.idPersona="Yavirac"
+   this.mensajes=null
   }
 
 }

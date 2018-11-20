@@ -2,9 +2,11 @@
       
         <div class="row">
             
-                <div class="elemento col-xs-8"><input class="ingreso" [(ngModel)]="mensaje" placeholder="mensaje"></div>
-                <div class="elemento col-xs-2"><button (click)="sendMessage()">ok</button></div>
-                <div class="elemento col-xs-2"><button (click)="adjuntar()">en</button></div>
-                
+                <div class="elemento col-xs-8"><input id="inputMensaje" class="ingreso" [(ngModel)]="mensaje" placeholder="mensaje"></div>
+                <div class="elemento col-xs-2"><button (click)="sendMessage()">ok</button></div><br>
+               <!--  <div class="elemento col-xs-2"><button (click)="foto">en</button></div> -->
+               <input type="file" id="foto" placeholder="Fotografía" #fileInput 
+               (change)="CodificarArchivo($event)" accept="*">
         </div>
+        
 </footer>

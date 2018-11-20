@@ -4,15 +4,17 @@
       </button>
   <a id="sala" class="navbar-brand" href="#">Bienvenido</a>
 
-  <img src='../../assets/img.png' class='imgRedonda' />
 
+  <input [(ngModel)]="idPersona" placeholder="nombre"/>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
     <div class="btn-group">
         <button type="button" class="sera btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Carreras
+         Carrera
         </button>
+        <div *ngIf="selectedHero">{{selectedHero.nombre}}</div>
+        
         <div class="dropdown-menu">
           <button class="dropdown-item" (click)="filtrar(post.id)" type="button" *ngFor ="let post of posts"><span class="span">{{post.nombre}}</span></button>
           
@@ -23,4 +25,4 @@
 
 </nav>
 
-<app-cuerpo  [mensajes]="mensajes"   [salaid]="salaid"></app-cuerpo>
+<app-cuerpo  [mensajes]="mensajes"   [salaid]="salaid" [idPersona]="idPersona" ></app-cuerpo>

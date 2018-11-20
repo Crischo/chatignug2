@@ -2,36 +2,43 @@
 
     <div class="messageContainer"    *ngFor="let mensaje of mensajes">
           <!--Mis mensajes-->
-        <div id="mData" *ngIf="mensaje.nombre =='Cristian'" style="background-color: rgb(123, 235, 88);" >
+        <div id="mData" *ngIf="mensaje.nombre !=idPersona" style="background-color: rgb(172, 177, 171);" ></div>
+        <div id="mData" *ngIf="mensaje.nombre ==idPersona" style="background-color: rgb(123, 235, 88);" ></div>
             <span id="sender">
                 {{mensaje.nombre}} 
             </span>
-            <span id="timestamp" 
-                >
+            <span id="timestamp"  >
                 {{ timeStamp | date:'medium' }}
             </span>
-        </div>
-        <div *ngIf="mensaje.nombre =='Cristian'" id="messageContent">
-           {{mensaje.mensaje}}
-        </div>
- 
-        <div id="mData" *ngIf="mensaje.nombre !='Cristian'" style="background-color: rgb(172, 177, 171);" >
-            <span id="sender">
-                {{mensaje.nombre}} 
-            </span>
-            <span id="timestamp" 
-                >
-                {{ timeStamp | date:'medium' }}
-            </span>
-        </div>
-        <div *ngIf="mensaje.nombre !='Cristian'" id="messageContent">
-           {{mensaje.mensaje}}
-        </div>
+            
+   
+        <!-- 
 
+
+        <div *ngIf="foto.type == jpg" >
+            <img *ngIf="mensaje.foto" src="{{mensaje.foto}}" style="width: 100%" alt="">
+           </div>
+           <div *ngIf="foto.type != jpg" >
+            <img src="../../assets/google_docs-logo.png">
+           </div>
+
+
+
+        -->
+        <img *ngIf="mensaje.foto" src="{{mensaje.foto}}" style="width: 100%" alt="">
+        <!-- Condional multiple
+              <div *ngIf="mensaje.tipo !='image/png' ||  mensaje.tipo !='image/jpeg'"> -->
+        <div *ngIf="mensaje.tipo !='image/png'">
+            <img src="../../assets/google_docs-logo.png " style="width: 100%">
+    </div>
+        <div *ngIf="mensaje.nombre ==idPersona" id="messageContent">
+           {{mensaje.mensaje}}
+           
+        </div>
+        
+     
 </div>
 
-
- 
 
 
     <!-- 
@@ -39,5 +46,7 @@
 </div>
 
 
+Probar codigo para funcionamiento else
+ <div *ngIf="showLogout();then userLogout else adminlogout"></div>
 -->
 

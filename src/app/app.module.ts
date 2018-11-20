@@ -14,6 +14,7 @@ import { CuerpoComponent } from './cuerpo/cuerpo.component';
 import { PieComponent } from './pie/pie.component';
 import { MensajeComponent } from './mensaje/mensaje.component';
 import {CarrerasService} from './servicios/carreras.service';
+import {DatosPersonaService} from './servicios/datos-persona.service';
 import {FormsModule} from '@angular/forms';
 
 @NgModule({
@@ -25,6 +26,7 @@ import {FormsModule} from '@angular/forms';
     MensajeComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
@@ -33,7 +35,7 @@ import {FormsModule} from '@angular/forms';
     FormsModule
   ],
   //en providers van los servicios
-  providers: [CarrerasService],
+  providers: [CarrerasService, DatosPersonaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

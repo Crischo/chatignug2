@@ -3,7 +3,7 @@
 
 .row{
   width: 95%;
-  height: 10%;
+  height: 12%;
   left: 25px;
   bottom: 10px;
   background-color: rgb(248, 241, 198);
@@ -23,3 +23,10 @@
   
 }
 
+#foto { 
+  width: 97%;
+        height: 30px;
+        font-size: 0.7em;
+
+}
+  

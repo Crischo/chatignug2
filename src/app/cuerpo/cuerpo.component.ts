@@ -9,6 +9,7 @@ import { Mensaje } from '../clases/mensaje';
 export class CuerpoComponent implements OnInit {
   @Input() mensajes: Mensaje[];
   @Input() salaid: string;
+  @Input() idPersona: string;
   constructor() { }
 
   ngOnInit() {

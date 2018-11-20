@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CarrerasService } from '../servicios/carreras.service';
 import { Mensaje } from '../clases/mensaje';
+import { Post } from '../clases/claseCarrera';
 
 @Component({
   selector: 'app-cabeza',
@@ -12,6 +13,8 @@ export class CabezaComponent implements OnInit {
   posts = [];
   mensajes: Mensaje[] = [];
   salaid='';
+  selectedHero: Post;
+  idPersona: String;
   constructor(private dataService: CarrerasService) {
     this.dataService.getData().subscribe(data => {
       this.posts = data;
@@ -20,9 +23,13 @@ export class CabezaComponent implements OnInit {
   }
 
   ngOnInit() {
+   
   }
 
   filtrar(carreraId){
+    console.log("seleccionnnnnnnnnnnnnnnnnnnnnn")
+    this.selectedHero = carreraId;
+    console.log("seleccion", this.selectedHero.nombre)
     this.salaid = carreraId;
     console.log("llego" , carreraId)
     this.dataService.getChatBySalaId(carreraId)
@@ -33,5 +40,5 @@ export class CabezaComponent implements OnInit {
         console.log(error)
       })
   }
-
+  
 }

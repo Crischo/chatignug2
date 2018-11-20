@@ -3,4 +3,6 @@ export interface Mensaje {
     "mensaje": string;
     "nombre": string;
     "salaid": string;
+    "foto":string;
+    "tipo":string;
 }
